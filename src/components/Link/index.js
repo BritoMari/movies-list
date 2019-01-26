@@ -10,7 +10,7 @@ class Link extends Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        See the code for this application
+        see the code here
         </a>
     );
   }

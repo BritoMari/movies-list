@@ -11,9 +11,11 @@ class App extends Component {
           <h1>
             Movies List
           </h1>
-          <Link />
         </header>
         <MoviesList />
+        <footer className="App-footer">
+          <p className="App-created">Created by Mariana Brito, <Link /></p>
+        </footer>
       </div>
     );
   }

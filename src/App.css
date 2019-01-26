@@ -16,7 +16,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding-bottom: 30px;
 }
 
 @keyframes App-logo-spin {
@@ -27,3 +26,14 @@
     transform: rotate(360deg);
   }
 }
+
+.App-footer {
+  background-color: #182825;
+  padding: 20px 0;
+}
+
+.App-created {
+  margin: 0;
+  color: #fff;
+}
+
