@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Link from './components/Link';
 import MoviesList from './components/MoviesList';
+import Search from './components/Search';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
             Movies List
           </h1>
         </header>
+        <Search />
         <MoviesList />
         <footer className="App-footer">
           <p className="App-created">Created by Mariana Brito, <Link /></p>
