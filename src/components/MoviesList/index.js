@@ -12,7 +12,7 @@ class MoviesList extends Component {
   }
 
   componentDidMount() {
-    fetch("http://www.omdbapi.com/?apikey=7c323e6e&s=harry-potter")
+    fetch("http://www.omdbapi.com/?apikey=7c323e6e&s=harry-potter&type=movie")
       .then(res => res.json())
       .then(
         (result) => {
@@ -41,10 +41,12 @@ class MoviesList extends Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <ul>
+        <ul className="MoviesList">
           {items.map(item => (
-            <li key={item.Title}>
-              {item.Title} {item.Year}
+            <li className="MoviesList-item" key={item.Title}>
+              <span className="MoviesList-img" style={{ backgroundImage: `url(${item.Poster})`}} />
+              <h2 className="MoviesList-title">{item.Title}</h2>
+              <p className="MoviesList-year">Ano: <strong>{item.Year}</strong></p>
             </li>
           ))}
         </ul>

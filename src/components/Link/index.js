@@ -6,11 +6,11 @@ class Link extends Component {
     return (
       <a
         className="App-link"
-        href="https://reactjs.org"
+        href="https://github.com/BritoMari/movies-list"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Learn React today
+        See the code for this application
         </a>
     );
   }

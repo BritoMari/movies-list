@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Link from './components/Link';
 import MoviesList from './components/MoviesList';
@@ -9,13 +8,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
+          <h1>
+            Movies List
+          </h1>
           <Link />
-          <MoviesList />
         </header>
+        <MoviesList />
       </div>
     );
   }
