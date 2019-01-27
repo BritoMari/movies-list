@@ -15,25 +15,29 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://www.omdbapi.com/?apikey=7c323e6e&s=harry-potter&type=movie")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            items: result.Search
-          });
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
+    this.fetchApi('Harry Potter');
+  }
+
+  fetchApi = value => {
+    fetch(`http://www.omdbapi.com/?apikey=7c323e6e&s=${value}&type=movie`)
+    .then(res => res.json())
+    .then(
+      (result) => {
+        this.setState({
+          isLoaded: true,
+          items: result.Search
+        });
+      },
+      // Note: it's important to handle errors here
+      // instead of a catch() block so that we don't swallow
+      // exceptions from actual bugs in components.
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error
+        });
+      }
+    )
   }
 
   render() {
@@ -45,7 +49,7 @@ class App extends Component {
             Movies List
           </h1>
         </header>
-        <Search />
+        <Search fetchResult={this.fetchApi} />
         <MoviesList error={error} isLoaded={isLoaded} items={items} />
         <footer className="App-footer">
           <p className="App-created">Created by Mariana Brito, <Link /></p>

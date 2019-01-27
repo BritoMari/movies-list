@@ -15,7 +15,9 @@ class Search extends Component {
   }
 
   sendSearch = event => {
-    console.log('buscar na api: ', this.state.search);
+    const { fetchResult } = this.props;
+
+    fetchResult(this.state.search);
   }
 
   render() {
