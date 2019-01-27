@@ -7,7 +7,7 @@ class MoviesList extends Component {
     const { error, isLoaded, items } = this.props;
 
     if (error) {
-      return <div>Error: {error.message}</div>;
+      return <div className="MoviesList-error">Error: {error}</div>;
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {

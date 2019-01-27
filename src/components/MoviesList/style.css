@@ -32,3 +32,7 @@
     transform: scale(1.1);
     box-shadow: 0 17px 65px 0 rgba(5,24,51,.35);
 }
+
+.MoviesList-error {
+    margin-bottom: 50px;
+}

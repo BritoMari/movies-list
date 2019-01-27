@@ -23,10 +23,17 @@ class App extends Component {
     .then(res => res.json())
     .then(
       (result) => {
-        this.setState({
-          isLoaded: true,
-          items: result.Search
-        });
+        if (result.Error){
+          this.setState({
+            isLoaded: true,
+            error: result.Error
+          });
+        } else {
+          this.setState({
+            isLoaded: true,
+            items: result.Search
+          });
+        }
       },
       // Note: it's important to handle errors here
       // instead of a catch() block so that we don't swallow
