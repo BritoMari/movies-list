@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   fetchApi = value => {
-    fetch(`http://www.omdbapi.com/?apikey=7c323e6e&s=${value}&type=movie`)
+    fetch(`https://www.omdbapi.com/?apikey=7c323e6e&s=${value}&type=movie`)
     .then(res => res.json())
     .then(
       (result) => {
