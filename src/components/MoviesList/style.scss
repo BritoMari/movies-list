@@ -1,0 +1,36 @@
+@import 'styles/variables.scss';
+
+.MoviesList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    &-item {
+        list-style: none;
+        width: 300px;
+        margin: 20px;
+        color: $cor-branca;
+        &:hover {
+            color: #06D6A0;
+            .MoviesList-img {
+                transform: scale(1.1);
+                box-shadow: 0 17px 65px 0 rgba(5,24,51,.35);
+            }
+        }
+    }
+    &-img {
+        width: 100%;
+        height: 440px;
+        background-size: cover;
+        display: block;
+        background-position: center;
+    }
+    &-error {
+        margin-bottom: 50px;
+    }
+    &-img,
+    &-tiltle,
+    &-year {
+        transition: all 500ms ease;
+    }
+}

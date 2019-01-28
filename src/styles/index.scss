@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Staatliches');
 @import url('https://fonts.googleapis.com/css?family=ABeeZee');
+@import 'styles/variables.scss';
 
 * {
   box-sizing: border-box;
@@ -11,5 +12,5 @@ body {
   font-family: 'ABeeZee', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #6D8EA0;
+  background: $cor-1;
 }
